@@ -11,16 +11,16 @@
         <!--Upload-->
         <scene sceneID="UaH-EQ-Fdw">
             <objects>
-                <viewController id="3fh-eH-Cg8" customClass="UploadViewController" customModule="FirebaseInstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3fh-eH-Cg8" customClass="UploadViewController" customModule="InstaClone_Firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KWI-cs-Co7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="4hC-yW-aDo">
-                                <rect key="frame" x="69" y="146" width="255" height="304"/>
+                                <rect key="frame" x="69" y="146" width="255" height="353"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5R-yd-z8E">
-                                <rect key="frame" x="69" y="533" width="255" height="34"/>
+                                <rect key="frame" x="69" y="582" width="255" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="i4y-ZR-pyE"/>
                                 </constraints>
@@ -28,14 +28,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3We-gT-iAc">
-                                <rect key="frame" x="152" y="630" width="75" height="35"/>
+                                <rect key="frame" x="152" y="679" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="fUj-Ne-4a2"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="actionButtonClicked:" destination="3fh-eH-Cg8" eventType="touchUpInside" id="chk-6N-TMx"/>
+                                    <action selector="saveButton:" destination="3fh-eH-Cg8" eventType="touchUpInside" id="ZP3-QR-dnJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,9 +54,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="opticaldiscdrive" catalog="system" id="QXy-xC-aI2"/>
+                    <navigationItem key="navigationItem" id="pn2-iz-jjd"/>
                     <connections>
-                        <outlet property="commentText" destination="G5R-yd-z8E" id="iMr-9c-HRP"/>
-                        <outlet property="imageView" destination="4hC-yW-aDo" id="Vif-fl-znb"/>
+                        <outlet property="imageView" destination="4hC-yW-aDo" id="Agh-m9-HpZ"/>
+                        <outlet property="nameText" destination="G5R-yd-z8E" id="1m7-cn-v3h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dk-yW-J9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -66,7 +67,7 @@
         <!--Settings-->
         <scene sceneID="an9-uN-vlV">
             <objects>
-                <viewController id="KGm-4N-gZ8" customClass="SettingsViewController" customModule="FirebaseInstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KGm-4N-gZ8" customClass="SettingsViewController" customModule="InstaClone_Firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FyH-c5-72J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +86,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="0Vj-qk-YoG"/>
+                    <navigationItem key="navigationItem" id="bPE-U1-y9t"/>
                     <connections>
                         <segue destination="rgE-JU-Hjj" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="1vY-3h-JzW"/>
                     </connections>
@@ -96,7 +98,7 @@
         <!--Feed-->
         <scene sceneID="JRo-y3-JbW">
             <objects>
-                <viewController id="2bM-sE-IrE" customClass="FeedViewController" customModule="FirebaseInstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2bM-sE-IrE" customClass="FeedViewController" customModule="InstaClone_Firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dka-bS-XP6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +106,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="person.fill" catalog="system" id="XPm-jT-eu3"/>
+                    <navigationItem key="navigationItem" id="uVr-ru-XQ6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdI-WY-Hnh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,9 +123,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2bM-sE-IrE" kind="relationship" relationship="viewControllers" id="ue7-LU-67b"/>
-                        <segue destination="3fh-eH-Cg8" kind="relationship" relationship="viewControllers" id="AN3-ng-NkG"/>
-                        <segue destination="KGm-4N-gZ8" kind="relationship" relationship="viewControllers" id="uGV-aX-Ezl"/>
+                        <segue destination="KGm-4N-gZ8" kind="presentation" modalPresentationStyle="fullScreen" id="IL1-7P-fTy"/>
+                        <segue destination="3fh-eH-Cg8" kind="presentation" modalPresentationStyle="fullScreen" id="bcS-cw-8uE"/>
+                        <segue destination="2bM-sE-IrE" kind="relationship" relationship="viewControllers" id="xi2-yQ-bb3"/>
+                        <segue destination="3fh-eH-Cg8" kind="relationship" relationship="viewControllers" id="A32-vP-m36"/>
+                        <segue destination="KGm-4N-gZ8" kind="relationship" relationship="viewControllers" id="WoE-iD-2DZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A68-Bc-Yw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -132,7 +137,7 @@
         <!--View Controller-->
         <scene sceneID="TwF-eR-ar6">
             <objects>
-                <viewController id="rgE-JU-Hjj" customClass="ViewController" customModule="FirebaseInstaClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rgE-JU-Hjj" customClass="ViewController" customModule="InstaClone_Firebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsD-GY-ROq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,6 +215,10 @@
             <point key="canvasLocation" x="-2100" y="-120.42253521126761"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IL1-7P-fTy"/>
+        <segue reference="bcS-cw-8uE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="opticaldiscdrive" catalog="system" width="128" height="88"/>
