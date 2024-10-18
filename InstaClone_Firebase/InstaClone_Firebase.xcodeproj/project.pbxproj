@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61C3883A2CC26BB7008D3B1C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 61C388392CC26BB7008D3B1C /* SDWebImage */; };
+		61C3883C2CC26BB7008D3B1C /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 61C3883B2CC26BB7008D3B1C /* SDWebImageMapKit */; };
 		61D0208D2CC1568700B1C9BE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 61D0208C2CC1568700B1C9BE /* FirebaseAnalytics */; };
 		61D0208F2CC1568700B1C9BE /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 61D0208E2CC1568700B1C9BE /* FirebaseAnalyticsOnDeviceConversion */; };
 		61D020912CC1568700B1C9BE /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 61D020902CC1568700B1C9BE /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -65,6 +67,7 @@
 			files = (
 				61D020BB2CC1568700B1C9BE /* FirebaseVertexAI-Preview in Frameworks */,
 				61D020A52CC1568700B1C9BE /* FirebaseFirestoreCombine-Community in Frameworks */,
+				61C3883C2CC26BB7008D3B1C /* SDWebImageMapKit in Frameworks */,
 				61D020A72CC1568700B1C9BE /* FirebaseFunctions in Frameworks */,
 				61D020B32CC1568700B1C9BE /* FirebasePerformance in Frameworks */,
 				61D020B92CC1568700B1C9BE /* FirebaseStorageCombine-Community in Frameworks */,
@@ -87,6 +90,7 @@
 				61D020B72CC1568700B1C9BE /* FirebaseStorage in Frameworks */,
 				61D0209B2CC1568700B1C9BE /* FirebaseCore in Frameworks */,
 				61D0208F2CC1568700B1C9BE /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				61C3883A2CC26BB7008D3B1C /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +157,8 @@
 				61D020B62CC1568700B1C9BE /* FirebaseStorage */,
 				61D020B82CC1568700B1C9BE /* FirebaseStorageCombine-Community */,
 				61D020BA2CC1568700B1C9BE /* FirebaseVertexAI-Preview */,
+				61C388392CC26BB7008D3B1C /* SDWebImage */,
+				61C3883B2CC26BB7008D3B1C /* SDWebImageMapKit */,
 			);
 			productName = InstaClone_Firebase;
 			productReference = 61D020732CC1556B00B1C9BE /* InstaClone_Firebase.app */;
@@ -184,6 +190,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				61D0208B2CC1568700B1C9BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				61C388382CC26BB7008D3B1C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 61D020742CC1556B00B1C9BE /* Products */;
@@ -413,6 +420,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		61C388382CC26BB7008D3B1C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.7;
+			};
+		};
 		61D0208B2CC1568700B1C9BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -424,6 +439,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		61C388392CC26BB7008D3B1C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61C388382CC26BB7008D3B1C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		61C3883B2CC26BB7008D3B1C /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61C388382CC26BB7008D3B1C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		61D0208C2CC1568700B1C9BE /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 61D0208B2CC1568700B1C9BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
